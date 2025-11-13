@@ -83,7 +83,7 @@ ol {
   align-items: end;
   grid-template-areas: "result" "content_details";
   column-gap: 30px;
-  grid-template-columns: 711px 399px;
+  grid-template-columns: 711px 401px; /* Размер 2-го блока чуть больше ради корректного отображения на Mozilla*/
 }
 
 /* ВИДЕО + ФОРМА ВВОДА */
@@ -121,6 +121,7 @@ ol {
   display: flex;
   flex-direction: row;
   width: fit-content;
+  cursor: pointer;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -201,7 +202,6 @@ ol {
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
-  text-underline-position: under;
   cursor: pointer;
 }
 
@@ -222,7 +222,6 @@ ol {
 
 .button:hover {
   text-decoration: underline;
-  text-underline-position: under;
 }
 
 .button:active {
@@ -271,12 +270,12 @@ ol {
   margin-top: 26px;
   height: 298px;
   overflow: scroll;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
-.content__list-item {
-  padding-left: 3px;
-  padding-right: 3px;
+.content__list{
+  width: 395px;
+  padding: 1px 3px 0px 2px;
 }
 
 .content__list-item:has(:focus-visible) {
@@ -313,7 +312,6 @@ ol {
 
 .content__card-link:hover {
   text-decoration: underline;
-  text-underline-position: under ;
 }
 
 .content__video-card {
@@ -334,7 +332,6 @@ ol {
 
 .content__video-card:hover  .content__video-card-description-container:hover{
   text-decoration: underline;
-  text-underline-position: under;
 }
 
 .content__video-card-title{
